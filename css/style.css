@@ -216,6 +216,12 @@ h1 {
     font-weight: 700;
 }
 
+.filter-butons {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
 
 
 
@@ -249,7 +255,7 @@ h1 {
 
 
 
-.input-main-location__text-input-area {
+.text-input-area {
     border: none;
     font-size: 18px;
     font-weight: 700;
@@ -268,9 +274,7 @@ h1 {
 
 }
 
-.search-writed-button__bouton-input-search {
-    display: none;
-}
+
 
 .search-writed-button {
     font-size: 17px;
@@ -287,9 +291,10 @@ h1 {
 }
 
 
-.input-main-location__text-input-area:active {
+.text-input-area:active {
     border: 1px solid #f2f2f2;
 }
+
 
 
 /*/////////////////////////NAV////////////*/
@@ -590,11 +595,78 @@ footer h3{
     }
     
     .premiere-section {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     footer {
-        flex-direction: column;
+        flex-direction: column ;
 
     }
+
+    .input-main-location p {
+        display: none;
+    }
+    
+    body {
+        padding-left: unset;
+        padding-right: unset;
+    }
+    
+    .input-main-location {
+        margin: auto;
+        margin-top: 36px;
+    }
+
+    .filter-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+            }
+    .filter-butons {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+
+   }
+
+    .filter-bar h2 {
+        font-size: 12px;
+    }
+
+    .filter-bar__element {
+        width: 40%;
+    }
+
+    .les-plus-populaires {
+        border-radius: unset;
+    }
+    .les-plus-populaires__card-main {
+        margin: auto;    
+    }
+
+    .hebergement-a-marseille__card-main {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .hebergement-a-marseille {
+        background-color: white;
+        align-items: center;
+    }
+    .hebergement-a-marseille__card-main img {
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+    .activité-marseille__card-main {
+        justify-content: center;
+    }
+
+    .hebergement-a-marseille h2 {
+        padding-left: unset;
+        padding-right: 40px;
+    }
+        
 }
