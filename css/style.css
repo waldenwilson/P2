@@ -4,8 +4,8 @@ body {
     max-width: 1400px;
     margin: auto;
     font-size: 16px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
 
 }
 
@@ -40,6 +40,8 @@ h1 {
     width: 246px;
     border: 5px solid white;
     border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+
   
 }
 
@@ -49,6 +51,7 @@ h1 {
     flex-direction: column;
     gap: 7px;
     margin: 4px 16px 11px 16px;
+ 
 
 }
 
@@ -56,7 +59,6 @@ h1 {
 .card h3 {
     font-size: 16px;
     font-weight: 700;
-
 }
 
 
@@ -93,26 +95,29 @@ h1 {
 
 /*////////////////////CARD ACTIVITY*/
 
-.activité-marseille__card-main img {
-    border-radius: 20px 20px 0px 0px;
-    border: none;
-    height: 389px;
-    width: 302px;
-    object-fit: cover;
-   }
-
-
-.activité-marseille__card-main h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 20px 19px 21px 19px;
-
-}
 .activité-marseille__card-main {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     gap: 15px;
+}
+
+.activité-marseille__card-main img {
+    border-radius: 20px 20px 0px 0px;
+    border: unset;
+    height: 390px;
+    width: 100%;
+}
+
+.activité-marseille__card-main h3 {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 20px 19px 21px 19px;
+}
+
+.activité-marseille__card-main .card  {
+    overflow-clip-margin: content-box;
+    overflow: clip; 
+    width: 302px;  
 }
 
 
@@ -129,7 +134,6 @@ h1 {
     height: 144px;
     max-width: 137px;
     border-radius: 20px 1px 1px 20px;
-    object-fit: cover;
 
 }
 
@@ -232,8 +236,6 @@ h1 {
     font-size: 17px;
     color: #0065FC;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     background-color: white;
     width: fit-content;
     border-radius: 17px;
@@ -285,10 +287,7 @@ h1 {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     padding: 22px;
-    gap: 10px;
-    font-weight: 700;
-
-}
+    }
 
 
 .text-input-area:active {
@@ -410,7 +409,6 @@ padding-top: 47px;
 
 .les-plus-populaires .card {
     flex-direction: row;
-    width: fit-content;
 }
 
 .les-plus-populaires__card-main__title {
@@ -468,6 +466,7 @@ padding-top: 47px;
     font-weight: 700;
     margin-top: 40px;
     margin-left: 30px;
+    padding-bottom: 20px;
 }
 
 
@@ -488,6 +487,7 @@ footer {
     margin-top: 60px;
     background-color: #f2f2f2;
     display: flex;
+    gap: 200px;
 }
 
 footer ul {
@@ -513,23 +513,28 @@ footer h3{
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .premiere-section {
         flex-direction: column;
+        gap: 20px;
     }
-       .les-plus-populaires h3 {
+    
+    .les-plus-populaires h3 {
         font-size: 16px;
     }
     .les-plus-populaires__card-main .card {
-        min-width: 252px;
+        min-width: 232px;
+        max-width: 252px;
+     
     }
     .les-plus-populaires__card-main {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 31px;
+        justify-content: space-between;        gap: 25px;
         padding-bottom: 42px;
+        max-width: 880px;
     }
     
     .les-plus-populaires {
         max-width: 880px;
-        margin-top: 50px;
+        margin-top: 30px;
     }
     .les-plus-populaires .card__description h3 {
         font-size: 14px;
@@ -540,12 +545,9 @@ footer h3{
     .les-plus-populaires .card img {
         width: 106px;
     }
-        
-    footer {
-        flex-direction: column;
-    }
+
     #h3afficherplus {
-        padding-top: 25px;
+        margin-bottom: 25px;
     }
     .filter-bar {
         gap: 30px;
@@ -553,6 +555,10 @@ footer h3{
     footer {
         gap: 70px;
     }
+    .activité-marseille__card-main img {
+               height: 211px;
+    }
+    
 }
 
 
@@ -593,6 +599,10 @@ footer h3{
         width: 100%;
         text-align: center;
     }
+
+    footer ul {
+        margin-bottom: unset
+    }
     
     .premiere-section {
         flex-direction: column-reverse;
@@ -600,7 +610,11 @@ footer h3{
 
     footer {
         flex-direction: column ;
-
+        gap: 20px;
+       
+    }
+    footer div {
+        padding-left: 70px;
     }
 
     .input-main-location p {
@@ -617,10 +631,16 @@ footer h3{
         margin-top: 36px;
     }
 
+    .text-input-area {
+        width: 200px;
+    }
+    
+
     .filter-bar {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
             }
     .filter-butons {
         flex-wrap: wrap;
@@ -656,17 +676,34 @@ footer h3{
     }
     .hebergement-a-marseille__card-main img {
         width: 100%;
-        object-fit: cover;
 
     }
 
     .activité-marseille__card-main {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
+    .activité-marseille__card-main img {
+        height: 114px;
+}
 
     .hebergement-a-marseille h2 {
         padding-left: unset;
         padding-right: 40px;
     }
+
+    .one {
+        padding-left: 15px;
+        padding-right: 15px
+    }
+
+    .seconde-section h2 {
+        margin-left: 18px;
+    }
+    
+    #h3afficherplus {
+        margin-left: unset;
+        }
+    
         
 }
